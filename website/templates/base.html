@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        {% block style %} {% endblock %}
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <title>{% block title %}{% endblock %}</title>
+    </head>
+    <body>
+        <header>
+            <a href = "/" class = "logo">  
+                <img src = "{{ url_for('static', filename='uploads/zimlewis_logo.png') }}" title = "Đinh Phạm Lê Hoàng"></img>  
+            </a>
+
+            <input type = "checkbox" id = "menu-bar" />
+            <label for = "menu-bar">Menu</label>
+
+            <nav class = "navbar">
+                <ul>
+                    <li><a href = "/">Home</a></li>
+                    <li><a href = "/blogs">Blogs</a></li>
+                </ul>
+            </nav>
+        </header>
+        <div id = "banner">{% block banner %}{% endblock %}</div>
+        {% block content%}{% endblock %}
+    </body>
+</html>

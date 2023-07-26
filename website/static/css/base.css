@@ -1,0 +1,160 @@
+*{
+    font-family: 'Times New Roman Cyr';
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-transform: capitalize;
+    text-decoration: none;
+    color: white
+}
+
+
+body{
+    min-height: 100vh;
+    background-color: #181d26;
+}
+
+
+header{
+    position: sticky;
+    top: 0;
+    left: 0;
+    right: 0;
+    background-color: black;
+    padding: 0 150px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    z-index: 10;
+}
+
+header .logo{
+    font-weight: bolder;
+    font-size: 25px;
+    height: 100%;
+    color: white;
+    display: flex;
+}
+
+header img{
+    height: 100px;
+}
+
+header .navbar ul{
+    list-style: none;
+    min-height: 100%;
+}
+
+header .navbar ul li{
+    position: relative;
+    float: left;
+    height: 100%;
+}
+
+header .navbar ul li a{
+    font-size: 20px;
+    padding: 20px;
+    color: white;
+    display: block;
+    width: 150px;
+    text-align: center;
+}
+
+header .navbar ul li a:hover{
+    color: black;
+    background-color: white;
+}
+
+header .navbar ul li ul{
+    position: absolute;
+    left: 0;
+    width: 150px;
+    background-color: black;
+    display: none;
+}
+
+header .navbar ul li ul li{
+    width: 100%;
+}
+
+header .navbar ul li ul li ul{
+    left: 150px;
+    top: 0;
+}
+header .navbar ul li:focus-within > ul,
+header .navbar ul li:hover > ul{
+    display: initial;
+}
+
+#menu-bar{
+    display: none;
+}
+
+header label{
+    font-size: 20px;
+    cursor: pointer;
+    display: none;
+}
+
+
+
+@media (max-width : 991px){
+    header{
+        padding: 20px;
+    }
+
+    header label{
+        display: initial;
+    }
+
+    header .navbar{
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background-color: black;
+        display: none;
+    }
+
+    header .navbar ul li{
+        width: 100%;
+    }
+
+    header .navbar ul li a{
+        width: 100%;
+        text-align: left;
+    }
+
+    header .navbar ul li ul{
+        position: relative;
+        width: 100%;
+    }
+
+    header .navbar ul li ul li{
+        background-color: black;
+    }
+
+    header .navbar ul li ul li ul{
+        width: 100%;
+        left: 0;
+    }
+
+    header img{
+        height: 50px;
+    }
+
+    #menu-bar:checked ~ .navbar{
+        display: initial;
+    }
+}
+
+
+#banner{
+    width: 100vw;
+    height: 200px;
+    background-image: url(../uploads/home.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position-x: center;
+    margin: auto;
+}
