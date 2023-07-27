@@ -1,5 +1,51 @@
 {% extends "base.html" %}
 
-{% block title %}Home{% endblock %}
+{% block title %}Đinh Phạm Lê Hoàng - Home{% endblock %}
 
-{% block banner %}<p>Home</p>{% endblock %}
+{% block style %}
+<link rel="stylesheet" href="{{ url_for('static', filename='css/home.css') }}">
+{% endblock %}
+
+{% block banner_bg %}<div id = "banner-bg" style = "background-image: url(./static/uploads/home.webp)"></div>{% endblock %}
+{% block banner_label %}<div id = "banner-label">Home</div>{% endblock %}
+
+{% block content %}
+<div id = "container">
+    <div class = "topics">
+        <div class = "topics-name">Basic information</div>
+        <div class = "topics-content">
+            <div class = "topics-text">
+                Hi there, I'm Đinh Phạm Lê Hoàng, and please, I only go by that name. Don't call me anything else rather than that. I'm currently 16 years old and will turn 17 this August. I'm a student of SD1702 at FPT Polytechnic.
+            </div>
+            <div class = "topics-img" style = "background-image: url({{ url_for('static', filename='uploads/dinh-pham-le-hoang.jpg') }})"></div>
+        </div>
+    </div>
+    <div class = "topics">
+        <div class = "topics-name">Strengths</div>
+        <div class = "topics-content">
+            <div class = "topics-text">
+                I'm not very good at literally anything, but here are some of my rare strengths: self-studying and coding. When I find a topic interesting, I can learn a lot by myself, at least at a medium level. As for coding, I'm pretty confident in that skill, having 5 years of experience.
+            </div>
+            <div class = "topics-img" style = "background-image: url({{ url_for('static', filename='uploads/jojo-pose.jpg') }})"></div>
+        </div>
+    </div>
+    <div class = "topics">
+        <div class = "topics-name">Weaknesses</div>
+        <div class = "topics-content">
+            <div class = "topics-text">
+                I have a lot of weaknesses, and here are some of them. First, I have a bit of social anxiety. Despite not showing it, I do get really nervous in public situations. Second, I struggle with self-confidence. It's hard to tell if it's simply realistic thinking or a lack of self-confidence, but those around me often say that I don't believe in myself.
+            </div>
+            <div class = "topics-img" style = "background-image: url({{ url_for('static', filename='uploads/nerd.jpg') }})"></div>
+        </div>
+    </div>
+    <div class = "topics">
+        <div class = "topics-name">Hobies</div>
+        <div class = "topics-content">
+            <div class = "topics-text">
+                I love coding in my free time. Yes, it may sound weird, but coding is really enjoyable and entertaining for me. While I do play games, it's not as much as I used to. Additionally, I enjoy reading novels, manga, and watching anime.
+            </div>
+            <div class = "topics-img" style = "background-image: url({{ url_for('static', filename='uploads/ganyuwu.jpg') }})"></div>
+        </div>
+    </div>
+</div>
+{% endblock %}

@@ -1,5 +1,66 @@
 {% extends "base.html" %}
 
-{% block title %}Blogs{% endblock %}
 
-{% block banner %}<p>Blogs</p>{% endblock %}
+{% block style %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blogs.css') }}">
+{% endblock %}
+
+{% block title %}Đinh Phạm Lê Hoàng - Blogs{% endblock %}
+
+{% block banner_bg %}
+<div id = "banner-bg" style = "background-image: url({{ url_for('static', filename='uploads/blogs.webp') }})"></div>
+{% endblock %}
+
+{% block banner_label %}
+<div id = "banner-label">Blogs</div>
+{% endblock %}
+
+
+{% block content%}
+<div class = "flex-box">
+    <div id = "blogs-container">
+    </div>
+</div>
+
+
+<script>
+    function addBlogsToContainer() {
+        const container = document.getElementById("blogs-container");
+    
+        for (const id in blogs) {
+            const blog = blogs[id];
+    
+            const postBox = document.createElement("div");
+            postBox.className = "post-box";
+            postBox.title = blog["title"];
+            
+    
+            const img = document.createElement("img");
+            img.src = `/static/uploads/topic-${id}.webp`;
+            img.className = "post-img";
+            postBox.appendChild(img);
+    
+            const titleLink = document.createElement("a");
+            titleLink.href = `/blogs/view?id=${id}`;
+            titleLink.className = "post-title";
+            titleLink.textContent = blog["title"];
+            postBox.appendChild(titleLink);
+    
+            const dateSpan = document.createElement("span");
+            dateSpan.className = "post-date";
+            dateSpan.textContent = blog["date"];
+            postBox.appendChild(dateSpan);
+    
+            const descriptionP = document.createElement("p");
+            descriptionP.className = "post-description";
+            descriptionP.textContent = blog["desc"];
+            postBox.appendChild(descriptionP);
+    
+            container.appendChild(postBox);
+        }
+    }
+    
+    addBlogsToContainer();
+</script>
+
+{% endblock %}

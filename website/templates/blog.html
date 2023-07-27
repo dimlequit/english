@@ -1,0 +1,35 @@
+
+{% extends "base.html" %}
+
+{% block style %} 
+<link rel="stylesheet" href="{{ url_for('static', filename='css/blog.css') }}">
+{% endblock %}
+{% block banner_bg %}
+<div id="banner-bg" style="background-image: url({{ url_for('static', filename='uploads/topic-' + id + '.webp') }})"></div>
+{% endblock %}
+
+{% block banner_label %}
+<div id = "banner-label">
+    <script> 
+        var id = "{{ id }}";
+        document.write(blogs["{{ id }}"]["title"]);
+    </script>
+</div>
+{% endblock %}
+
+
+{% block content%}
+
+<div class = "content-container">
+    <a class = "back-btn" href = "/blogs">Back</a>
+</div>
+
+
+<script>
+    document.title = 'Đinh Phạm Lê Hoàng - ' + blogs["{{ id }}"]["title"];
+</script>
+
+{% endblock %}
+
+
+

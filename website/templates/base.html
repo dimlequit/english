@@ -5,6 +5,9 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         {% block style %} {% endblock %}
         <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+        <link rel="icon" type="image/x-icon" href="{{ url_for('static', filename='uploads/zimlewis_logo.ico') }}">
+        <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css">
+        <script src = "{{ url_for('static', filename='data/data.js') }}"></script>
         <title>{% block title %}{% endblock %}</title>
     </head>
     <body>
@@ -23,7 +26,30 @@
                 </ul>
             </nav>
         </header>
-        <div id = "banner">{% block banner %}{% endblock %}</div>
+        <div id = "banner">{% block banner_bg %}{% endblock %}{% block banner_label %}{% endblock %}</div>
         {% block content%}{% endblock %}
+        {% block script %}{% endblock %}
+
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="row">
+                    <div class="footer-col">
+                        <h4>Play my games</h4>
+                        <ul>
+                            <li><a href="https://gamejolt.com/@dimlelquit">Gamejolt</a></li>
+                            <li><a href="https://gamejolt.com/@dimlelquit">Itch.io</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-col">
+                        <h4>follow me</h4>
+                        <div class="social-links">
+                            <a href="https://www.facebook.com/daychacchanlahoang"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.reddit.com/u/Zimlewis"><i class="fab fa-reddit"></i></a>
+                            <a href="https://www.instagram.com/dplhoang/"><i class="fab fa-instagram"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+       </footer>
     </body>
 </html>
