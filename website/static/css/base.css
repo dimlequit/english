@@ -211,6 +211,10 @@ ul{
 	background-color: #ffffff;
 }
 
+.flex-box{
+    display: flex;
+}
+
 /*responsive*/
 @media(max-width: 767px){
   .footer-col{

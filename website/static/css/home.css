@@ -13,7 +13,7 @@
     border-radius: 10px;
     overflow: hidden;
     margin-bottom: 10vw;
-    box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+    box-shadow: 0 0 14px 14px hsl(355deg 25% 15% / 10%);
 }
 
 .topics-name{
@@ -40,6 +40,7 @@
 }
 .topics-text{
     min-height: 100%;
+    text-align: justify;
     margin-left: auto;
     margin-right: auto;
     max-width: 50%;
@@ -64,9 +65,7 @@
     }
 
     .topics-img{
-        margin-top: auto;
-        margin-bottom: auto;
-        min-width: 100%;
+        min-width: 90%;
         min-height: 300px;
     }
     .topics-text{
