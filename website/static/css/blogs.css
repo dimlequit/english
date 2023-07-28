@@ -4,12 +4,13 @@
     justify-content: center;
     width: 80vw;
     margin: auto;
-    margin-top: 3vh;
+    margin-top: 5vh;
+    margin-bottom: 5vh;
     gap: 1.5rem;
 }
 
 .post-box{
-    box-shadow: 0 4px 14px hsl(355deg 25% 15% / 10%);
+    box-shadow: 0 0 14px 14px hsl(355deg 25% 15% / 10%);
     padding: 15px;
     border-radius: 0.5rem;
 }
@@ -45,6 +46,3 @@
     overflow: hidden
 }
 
-.flex-box{
-    display: flex;
-}

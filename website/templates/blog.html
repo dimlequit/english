@@ -22,11 +22,20 @@
 
 <div class = "content-container">
     <a class = "back-btn" href = "/blogs">Back</a>
+
+
+    <div class = "flex-box">
+    </div>
+
+    <a class = "back-btn" href = "/blogs">Back</a>
 </div>
 
 
 <script>
+    var flex_box = document.getElementsByClassName("flex-box")[0]
+    console.log(flex_box);
     document.title = 'Đinh Phạm Lê Hoàng - ' + blogs["{{ id }}"]["title"];
+    flex_box.innerHTML = blogs["{{ id }}"]["html"];
 </script>
 
 {% endblock %}
