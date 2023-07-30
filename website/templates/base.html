@@ -51,12 +51,20 @@
                     <div class="footer-col">
                         <h4>Contact me</h4>
                         <ul>
-                            <li><a href="tel:0355361405">Phone number</a></li>
-                            <li><a href="mailto:z1ml3w1s123@gmail.com">email</a></li>
+                            <li><a onclick = "copyText(this.innerText)" href="tel:0355361405">0355361405</a></li>
+                            <li><a onclick = "copyText(this.innerText)" href="mailto:z1ml3w1s123@gmail.com">z1ml3w1s123@gmail.com</a></li>
                         </ul>
                     </div>
                 </div>
             </div>
        </footer>
+
+        <script>
+        function copyText(text) {
+            /* Copy text into clipboard */
+            navigator.clipboard.writeText
+                (text);
+        }
+        </script>
     </body>
 </html>
