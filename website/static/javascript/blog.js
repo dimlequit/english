@@ -3,15 +3,19 @@ window.onload = (e) => {
     console.log(document.querySelector("#blogs-container"))
     var html = ""
     for (var i in blogs){
-        html += "<div class = \"post-box\"> <img src = \"{{ url_for('static', filename='uploads/topic-" + i + ".webp') }}\" class = \"post-img\"></img> <a href = \"/blogs/view?id=" + i + "\" class = \"post-title\"><script>document.write(blogs[" + i + "][\"title\"]);</script></a> <span class = \"post-date\"><script>document.write(blogs[" + i + "][\"date\"]);</script></span> <p class = \"post-description\"><script>document.write(blogs[" + i + "][\"desc\"]);</script></p> </div>";
-       
+        html += "<a href = '/blogs/view?id=" + i + "'> topic " + i + "</a><br>";
+        blogs_div.innerHTML = html;
     }
-    blogs_div.innerHTML = html;
 }
 
 /**
 
-
+    <div class = "post-box">
+        <img src = "{{ url_for('static', filename='uploads/topic-" + i".webp') }}" class = "post-img"></img>  
+        <a href = "/blogs/view?id=001" class = "post-title"><script>document.write(blogs["001"]["title"]);</script></a>
+        <span class = "post-date"><script>document.write(blogs["001"]["date"]);</script></span>
+        <p class = "post-description"><script>document.write(blogs["001"]["desc"]);</script></p>
+    </div>
 
 
  */

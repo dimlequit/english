@@ -1,6 +1,6 @@
 #blogs-container{
     display: grid;
-    grid-template-columns: repeat(auto-fit , minmax(280px , auto));
+    grid-template-columns: repeat(auto-fit , minmax(280px , 305px));
     justify-content: center;
     width: 80vw;
     margin: auto;
